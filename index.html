@@ -751,6 +751,57 @@
             font-size: 14px;
         }
         
+        /* WhatsApp CTA Section */
+        .whatsapp-cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(37, 211, 102, 0.05) 100%);
+        }
+        
+        .whatsapp-cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(37, 211, 102, 0.2);
+            border-radius: 16px;
+            padding: 40px 30px;
+        }
+        
+        .whatsapp-cta-box h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #10b981 0%, #25d366 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .whatsapp-cta-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+        
+        .whatsapp-btn-large {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+        
         /* Responsive - Mobile First */
         @media (max-width: 768px) {
             .solution-content {
@@ -829,6 +880,28 @@
             
             .vat-notice-pricing p {
                 font-size: 13px;
+            }
+            
+            .whatsapp-cta-section {
+                padding: 60px 15px;
+            }
+            
+            .whatsapp-cta-box {
+                padding: 30px 20px;
+            }
+            
+            .whatsapp-cta-box h3 {
+                font-size: 22px;
+            }
+            
+            .whatsapp-cta-box p {
+                font-size: 16px;
+            }
+            
+            .whatsapp-btn-large {
+                width: 100%;
+                padding: 16px 30px;
+                font-size: 16px;
             }
         }
         
@@ -1106,12 +1179,11 @@
                     </div>
                     <ul class="pricing-features">
                         <li>AI Readiness Score (0-100 puncte)</li>
-                        <li>Raport PDF detaliat (15-20 pagini)</li>
+                        <li>Raport PDF detaliat</li>
                         <li>Verificare competitori</li>
                         <li>Recomandări prioritizate</li>
-                        <li>Screenshot ChatGPT pentru industria ta</li>
                     </ul>
-                    <a href="https://buy.stripe.com/5kQcN55jbfI8aQ1gtK5Rm04" target="_blank" class="pricing-cta">Comandă acum - 199 RON</a>
+                    <a href="https://buy.stripe.com/5kQcN55jbfI8aQ1gtK5Rm04" target="_blank" class="pricing-cta">Comandă acum</a>
                 </div>
                 
                 <!-- Package 2: Integrare AI Search -->
@@ -1125,10 +1197,10 @@
                         <li>Bing Webmaster Tools setup complet</li>
                         <li>Google Search Console setup</li>
                         <li>Schema.org markup implementat</li>
-                        <li>Verificare ChatGPT/Copilot (Before/After screenshots)</li>
+                        <li>Verificare ChatGPT/Copilot</li>
                         <li><strong>GARANȚIE:</strong> Garantăm conexiunea completă + raport de activare + dovada clară a integrării.</li>
                     </ul>
-                    <a href="https://buy.stripe.com/5kQ28rbHz7bC8HTdhy5Rm05" target="_blank" class="pricing-cta">Comandă acum - 399 RON</a>
+                    <a href="https://buy.stripe.com/5kQ28rbHz7bC8HTdhy5Rm05" target="_blank" class="pricing-cta">Comandă acum</a>
                 </div>
                 
                 <!-- Package 3: AI Ready Complete -->
@@ -1147,13 +1219,26 @@
                         <li>Before/After report complet</li>
                         <li><strong>GARANȚIE:</strong> Garantăm conexiunea completă + raport de activare + dovada clară a integrării.</li>
                     </ul>
-                    <a href="https://buy.stripe.com/7sY14n26ZgMc8HT7Xe5Rm06" target="_blank" class="pricing-cta">Comandă acum - 899 RON</a>
+                    <a href="https://buy.stripe.com/7sY14n26ZgMc8HT7Xe5Rm06" target="_blank" class="pricing-cta">Comandă acum</a>
                 </div>
             </div>
             
             <!-- VAT Notice after Pricing Cards -->
             <div class="vat-notice-pricing">
                 <p>* Toate prețurile sunt fără TVA (21%). Prețul final = preț afisat + TVA.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="container">
+            <div class="whatsapp-cta-box">
+                <h3>Cauți o echipă pe termen lung?</h3>
+                <p>Dacă ai un business și faci reclame, ads, SEO, Meta și mai nou și AI și cauți o echipă potrivită pe termen lung — lasă-ne un mesaj pe WhatsApp.</p>
+                <a href="https://wa.me/40730688360?text=Vreau%20s%C4%83%20discut%C4%83m%20despre%20colaborare%20pe%20termen%20lung" class="whatsapp-btn-large" target="_blank">
+                    📱 Trimite mesaj pe WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -1343,6 +1428,74 @@
             
             lastScroll = currentScroll;
         });
+
+        // UTM tracking + Facebook lead pre-fill
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Get form fields
+            const nameField = document.querySelector('input[name="name"], input[name="prenume"]');
+            const emailField = document.querySelector('input[name="email"]');
+            const phoneField = document.querySelector('input[name="phone"], input[name="telefon"]');
+            
+            // Pre-fill from URL params (Facebook Lead Ads)
+            if (urlParams.get('name') && nameField) {
+                nameField.value = urlParams.get('name');
+            }
+            if (urlParams.get('email') && emailField) {
+                emailField.value = urlParams.get('email');
+            }
+            if (urlParams.get('phone') && phoneField) {
+                phoneField.value = urlParams.get('phone');
+            }
+            
+            // Track UTM source (save to hidden field or localStorage)
+            const utmSource = urlParams.get('utm_source') || 'direct';
+            const utmCampaign = urlParams.get('utm_campaign') || '';
+            const fbclid = urlParams.get('fbclid') || '';
+            
+            // Save to localStorage for form submission
+            if (utmSource !== 'direct') {
+                localStorage.setItem('lead_source', utmSource);
+                localStorage.setItem('lead_campaign', utmCampaign);
+            }
+            if (fbclid) {
+                localStorage.setItem('lead_fbclid', fbclid);
+            }
+            
+            // On form submit, append source data
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function() {
+                    const source = localStorage.getItem('lead_source') || 'direct';
+                    const campaign = localStorage.getItem('lead_campaign') || '';
+                    const fbclid = localStorage.getItem('lead_fbclid') || '';
+                    
+                    // Create hidden fields
+                    const sourceInput = document.createElement('input');
+                    sourceInput.type = 'hidden';
+                    sourceInput.name = 'source';
+                    sourceInput.value = source;
+                    form.appendChild(sourceInput);
+                    
+                    if (campaign) {
+                        const campaignInput = document.createElement('input');
+                        campaignInput.type = 'hidden';
+                        campaignInput.name = 'campaign';
+                        campaignInput.value = campaign;
+                        form.appendChild(campaignInput);
+                    }
+                    
+                    if (fbclid) {
+                        const fbclidInput = document.createElement('input');
+                        fbclidInput.type = 'hidden';
+                        fbclidInput.name = 'fbclid';
+                        fbclidInput.value = fbclid;
+                        form.appendChild(fbclidInput);
+                    }
+                });
+            });
+        })();
     </script>
 </body>
 </html>
