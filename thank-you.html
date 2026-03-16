@@ -8,6 +8,52 @@
     
     <title>Plată Confirmată - PrimulSite.ro</title>
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '456249041418626');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=456249041418626&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Purchase Event Tracking -->
+    <script>
+    // Detect which package was purchased from URL param
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const packageParam = urlParams.get('package') || 'unknown';
+        
+        // Map package to value (with 21% TVA included)
+        const packageValues = {
+            'raport': 240.79,
+            'integrare': 482.79,
+            'complete': 1087.79
+        };
+        
+        const value = packageValues[packageParam] || 0;
+        
+        // Track Purchase event
+        if (typeof fbq !== 'undefined' && value > 0) {
+            fbq('track', 'Purchase', {
+                value: value,
+                currency: 'RON',
+                content_name: 'AI Search Optimization - ' + packageParam,
+                content_type: 'product'
+            });
+        }
+    })();
+    </script>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
