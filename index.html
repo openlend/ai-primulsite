@@ -203,29 +203,37 @@
             font-weight: 600;
         }
         
-        /* Scarcity Banner */
-        .scarcity-banner {
-            background: var(--danger);
+        /* Scarcity Banner - Improved */
+        .scarcity-banner-improved {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            padding: 16px 20px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3);
+        }
+        
+        .scarcity-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .scarcity-icon {
+            font-size: 24px;
+        }
+        
+        .scarcity-text {
             color: white;
-            padding: 24px;
+            font-size: 16px;
+            font-weight: 500;
             text-align: center;
+        }
+        
+        .scarcity-text strong {
             font-weight: 700;
             font-size: 18px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
-        }
-        
-        .scarcity-banner .countdown {
-            display: block;
-            margin-top: 8px;
-            font-size: 16px;
-            font-weight: 600;
         }
         
         /* Stats Bar */
@@ -725,12 +733,25 @@
             text-align: center;
         }
         
+        .vat-notice-pricing {
+            text-align: center;
+            margin: 40px auto 60px;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+        
+        .vat-notice-pricing p {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+        
         .footer-copyright {
             color: var(--text-dim);
             font-size: 14px;
         }
         
-        /* Responsive */
+        /* Responsive - Mobile First */
         @media (max-width: 768px) {
             .solution-content {
                 grid-template-columns: 1fr;
@@ -753,17 +774,61 @@
                 grid-template-columns: 1fr;
             }
             
+            .pricing-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .cta-button,
+            .pricing-cta,
+            .form-submit {
+                width: 100%;
+                padding: 16px 24px;
+                font-size: 16px;
+            }
+            
+            .thank-you-banner {
+                padding: 30px 20px;
+            }
+            
             .thank-you-banner h2 {
-                font-size: 24px;
+                font-size: 20px;
             }
             
             .thank-you-banner p {
+                font-size: 14px;
+            }
+            
+            .scarcity-banner-improved {
+                padding: 14px 15px;
+                margin-bottom: 30px;
+                border-radius: 8px;
+            }
+            
+            .scarcity-icon {
+                font-size: 20px;
+            }
+            
+            .scarcity-text {
+                font-size: 14px;
+            }
+            
+            .scarcity-text strong {
                 font-size: 16px;
             }
             
-            .scarcity-banner {
-                font-size: 16px;
-                padding: 20px;
+            .vat-notice-pricing {
+                margin: 30px auto 40px;
+                padding: 0 15px;
+            }
+            
+            .vat-notice-pricing p {
+                font-size: 13px;
             }
         }
         
@@ -790,7 +855,7 @@
     <header>
         <nav class="container">
             <div class="logo">PrimulSite.ro</div>
-            <a href="#contact" class="nav-cta">Verificare Gratuită</a>
+            <a href="#contact" class="nav-cta">Comandă acum</a>
         </nav>
     </header>
 
@@ -814,7 +879,7 @@
                     ChatGPT, Copilot și Perplexity domină căutarea AI cu 1 miliard de utilizatori pe săptămână. 
                     Dacă nu ești pe Bing, nu exiști pentru ei.
                 </p>
-                <a href="#contact" class="cta-primary">Verifică GRATUIT dacă Afacerea Ta Apare pe ChatGPT</a>
+                <a href="#contact" class="cta-primary">Comandă acum</a>
                 <div class="trust-badge">
                     ✓ Implementare sub 1 săptămână
                 </div>
@@ -1023,11 +1088,12 @@
                 </p>
             </div>
             
-            <!-- Scarcity Banner -->
-            <div class="scarcity-banner">
-                ⏰ <strong>Doar 4 locuri libere</strong> pentru implementare în martie 2026
-                <br>
-                <span class="countdown">Oferta expiră în: <strong id="countdown">23:45:12</strong></span>
+            <!-- Scarcity Banner - Improved -->
+            <div class="scarcity-banner-improved">
+                <div class="scarcity-content">
+                    <span class="scarcity-icon">🔥</span>
+                    <span class="scarcity-text">Doar <strong>4 locuri</strong> disponibile pentru martie 2026</span>
+                </div>
             </div>
             
             <div class="pricing-grid">
@@ -1045,7 +1111,7 @@
                         <li>Recomandări prioritizate</li>
                         <li>Screenshot ChatGPT pentru industria ta</li>
                     </ul>
-                    <a href="https://buy.stripe.com/5kQcN55jbfI8aQ1gtK5Rm04" target="_blank" class="pricing-cta">Comandă Raport (199 RON + TVA)</a>
+                    <a href="https://buy.stripe.com/5kQcN55jbfI8aQ1gtK5Rm04" target="_blank" class="pricing-cta">Comandă acum - 199 RON</a>
                 </div>
                 
                 <!-- Package 2: Integrare AI Search -->
@@ -1062,7 +1128,7 @@
                         <li>Verificare ChatGPT/Copilot (Before/After screenshots)</li>
                         <li><strong>GARANȚIE:</strong> Garantăm conexiunea completă + raport de activare + dovada clară a integrării.</li>
                     </ul>
-                    <a href="https://buy.stripe.com/5kQ28rbHz7bC8HTdhy5Rm05" target="_blank" class="pricing-cta">Comandă Integrare (399 RON + TVA)</a>
+                    <a href="https://buy.stripe.com/5kQ28rbHz7bC8HTdhy5Rm05" target="_blank" class="pricing-cta">Comandă acum - 399 RON</a>
                 </div>
                 
                 <!-- Package 3: AI Ready Complete -->
@@ -1081,8 +1147,13 @@
                         <li>Before/After report complet</li>
                         <li><strong>GARANȚIE:</strong> Garantăm conexiunea completă + raport de activare + dovada clară a integrării.</li>
                     </ul>
-                    <a href="https://buy.stripe.com/7sY14n26ZgMc8HT7Xe5Rm06" target="_blank" class="pricing-cta">Comandă Pachet Complete (899 RON + TVA)</a>
+                    <a href="https://buy.stripe.com/7sY14n26ZgMc8HT7Xe5Rm06" target="_blank" class="pricing-cta">Comandă acum - 899 RON</a>
                 </div>
+            </div>
+            
+            <!-- VAT Notice after Pricing Cards -->
+            <div class="vat-notice-pricing">
+                <p>* Toate prețurile sunt fără TVA (21%). Prețul final = preț afisat + TVA.</p>
             </div>
         </div>
     </section>
@@ -1092,9 +1163,9 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Contact</span>
-                <h2 class="section-title">Verifică GRATUIT Dacă Afacerea Ta Apare pe ChatGPT</h2>
+                <h2 class="section-title">Contactează-ne</h2>
                 <p class="section-description">
-                    Completează formularul și primești raportul în 24h
+                    Completează formularul și te contactăm în 24h
                 </p>
             </div>
             
@@ -1120,7 +1191,7 @@
                         <input type="url" id="website" name="website" required placeholder="https://afacerea.ro">
                     </div>
                     
-                    <button type="submit" class="form-submit">Trimite Cerere de Analiză Gratuită</button>
+                    <button type="submit" class="form-submit">Trimite Cerere</button>
                     
                     <div class="success-message" id="successMessage">
                         ✓ Mulțumim! Vei primi raportul în 24h pe email.
@@ -1215,21 +1286,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Countdown timer (24h from page load)
-        let timeLeft = 24 * 60 * 60; // 24 hours in seconds
-        const countdownEl = document.getElementById('countdown');
-
-        setInterval(() => {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            
-            countdownEl.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            
-            timeLeft--;
-            if (timeLeft < 0) timeLeft = 24 * 60 * 60; // Reset
-        }, 1000);
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
