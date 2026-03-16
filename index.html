@@ -38,6 +38,7 @@
             --text: #e2e8f0;
             --text-dim: #94a3b8;
             --success: #10b981;
+            --danger: #ef4444;
             --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
         }
         
@@ -98,9 +99,29 @@
             box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
         }
         
+        /* Thank You Banner */
+        .thank-you-banner {
+            background: var(--success);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .thank-you-banner h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+        }
+        
+        .thank-you-banner p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
         /* Hero Section */
         .hero {
-            padding: 140px 0 80px;
+            padding: 80px 0 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -179,6 +200,31 @@
             border-radius: 8px;
             color: var(--success);
             font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* Scarcity Banner */
+        .scarcity-banner {
+            background: var(--danger);
+            color: white;
+            padding: 24px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        
+        .scarcity-banner .countdown {
+            display: block;
+            margin-top: 8px;
+            font-size: 16px;
             font-weight: 600;
         }
         
@@ -505,6 +551,13 @@
             margin-bottom: 8px;
         }
         
+        .pricing-price.strikethrough {
+            font-size: 24px;
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-bottom: 0;
+        }
+        
         .pricing-period {
             color: var(--text-dim);
             font-size: 14px;
@@ -549,6 +602,8 @@
             background: var(--gradient);
             border-color: transparent;
             color: white;
+            padding: 20px;
+            font-size: 18px;
         }
         
         .pricing-cta:hover {
@@ -663,6 +718,13 @@
             color: var(--primary);
         }
         
+        .vat-notice {
+            color: #9ca3af;
+            font-size: 14px;
+            margin: 24px 0;
+            text-align: center;
+        }
+        
         .footer-copyright {
             color: var(--text-dim);
             font-size: 14px;
@@ -689,6 +751,19 @@
             
             .pricing-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .thank-you-banner h2 {
+                font-size: 24px;
+            }
+            
+            .thank-you-banner p {
+                font-size: 16px;
+            }
+            
+            .scarcity-banner {
+                font-size: 16px;
+                padding: 20px;
             }
         }
         
@@ -718,6 +793,14 @@
             <a href="#contact" class="nav-cta">Verificare Gratuită</a>
         </nav>
     </header>
+
+    <!-- Thank You Banner -->
+    <section class="thank-you-banner">
+        <div class="container">
+            <h2>✅ Mulțumim că ne-ai lăsat datele!</h2>
+            <p>Am primit cererea ta. Între timp, <strong>alege cel mai rapid</strong> pachetul potrivit pentru afacerea ta:</p>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -940,69 +1023,66 @@
                 </p>
             </div>
             
-            <div class="pricing-grid">
-                <!-- Free Package -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Analiză AI</h3>
-                        <div class="pricing-price">GRATUIT</div>
-                        <div class="pricing-period">verificare unică</div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Verificare ChatGPT</li>
-                        <li>Verificare Copilot</li>
-                        <li>Verificare Perplexity</li>
-                        <li>Raport indexare Bing</li>
-                        <li>Recomandări de bază</li>
-                    </ul>
-                    <a href="#contact" class="pricing-cta">Solicită Analiză Gratuită</a>
-                </div>
-                
-                <!-- Basic Package -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Setup Basic</h3>
-                        <div class="pricing-price">500 RON</div>
-                        <div class="pricing-period">plată unică</div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Tot din pachetul Analiză AI</li>
-                        <li>Indexare Bing optimizată</li>
-                        <li>Structured data (Schema.org)</li>
-                        <li>Verificare tehnică completă</li>
-                        <li>Raport final implementare</li>
-                    </ul>
-                    <a href="#contact" class="pricing-cta">Comandă Setup Basic</a>
-                </div>
-                
-                <!-- Pro Package -->
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Recomandat</div>
-                    <div class="pricing-header">
-                        <h3>Setup Pro</h3>
-                        <div class="pricing-price">2,500 RON</div>
-                        <div class="pricing-period">plată unică</div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Tot din pachetul Setup Basic</li>
-                        <li>Optimizare conținut AI-friendly</li>
-                        <li>Bing Places optimization</li>
-                        <li>Strategie citări AI</li>
-                        <li>Monitorizare 30 zile</li>
-                        <li>Rapoarte săptămânale</li>
-                        <li>Suport prioritar</li>
-                    </ul>
-                    <a href="#contact" class="pricing-cta">Comandă Setup Pro</a>
-                </div>
+            <!-- Scarcity Banner -->
+            <div class="scarcity-banner">
+                ⏰ <strong>Doar 4 locuri libere</strong> pentru implementare în martie 2026
+                <br>
+                <span class="countdown">Oferta expiră în: <strong id="countdown">23:45:12</strong></span>
             </div>
             
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="color: var(--text-dim); margin-bottom: 16px;">
-                    Plăți securizate prin Stripe
-                </p>
-                <a href="#plata" class="cta-primary" style="display: inline-block;">
-                    Către Plată Securizată →
-                </a>
+            <div class="pricing-grid">
+                <!-- Package 1: Raport AI Ready -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Raport AI Ready</h3>
+                        <div class="pricing-price">199 RON</div>
+                        <div class="pricing-period">+ TVA | Livrare: 3-5 zile</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>AI Readiness Score (0-100 puncte)</li>
+                        <li>Raport PDF detaliat (15-20 pagini)</li>
+                        <li>Verificare competitori</li>
+                        <li>Recomandări prioritizate</li>
+                        <li>Screenshot ChatGPT pentru industria ta</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Comandă Raport (199 RON + TVA)</a>
+                </div>
+                
+                <!-- Package 2: Integrare AI Search -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Integrare AI Search</h3>
+                        <div class="pricing-price">399 RON</div>
+                        <div class="pricing-period">+ TVA | Implementare: 1-2 săptămâni</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Bing Webmaster Tools setup complet</li>
+                        <li>Google Search Console setup</li>
+                        <li>Schema.org markup implementat</li>
+                        <li>Verificare ChatGPT/Copilot (Before/After screenshots)</li>
+                        <li><strong>GARANȚIE:</strong> Dacă nu apari pe ChatGPT în 2 săptămâni → banii înapoi</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Comandă Integrare (399 RON + TVA)</a>
+                </div>
+                
+                <!-- Package 3: AI Ready Complete -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">⭐ BEST VALUE - ECONOMISEȘTI 601 RON</div>
+                    <div class="pricing-header">
+                        <h3>AI Ready Complete</h3>
+                        <div class="pricing-price strikethrough">1,500 RON</div>
+                        <div class="pricing-price">899 RON</div>
+                        <div class="pricing-period">+ TVA | Implementare: 2-3 săptămâni</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><strong>TOT din Pachet 1 + Pachet 2</strong></li>
+                        <li>PLUS: Optimizare 5 pagini principale</li>
+                        <li>Content suggestions (5 articole + FAQ template)</li>
+                        <li>Before/After report complet</li>
+                        <li><strong>GARANȚIE:</strong> Apariție pe ChatGPT în 3 săptămâni sau banii înapoi</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Comandă Pachet Complete (899 RON + TVA)</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1065,6 +1145,7 @@
                     <a href="#preturi">Prețuri</a>
                     <a href="tel:+40730688360">+40 730 688 360</a>
                 </div>
+                <p class="vat-notice">* Toate prețurile afișate sunt fără TVA (19%). Prețul final va include TVA conform legislației în vigoare.</p>
                 <p class="footer-copyright">
                     © 2026 PrimulSite.ro - AI Search Optimization | Cluj-Napoca, România
                 </p>
@@ -1092,7 +1173,7 @@
             "latitude": 46.7712,
             "longitude": 23.6236
         },
-        "priceRange": "GRATUIT - 2500 RON",
+        "priceRange": "199 RON - 899 RON",
         "areaServed": {
             "@type": "Country",
             "name": "Romania"
@@ -1112,20 +1193,20 @@
         "offers": [
             {
                 "@type": "Offer",
-                "name": "Analiză AI",
-                "price": "0",
+                "name": "Raport AI Ready",
+                "price": "199",
                 "priceCurrency": "RON"
             },
             {
                 "@type": "Offer",
-                "name": "Setup Basic",
-                "price": "500",
+                "name": "Integrare AI Search",
+                "price": "399",
                 "priceCurrency": "RON"
             },
             {
                 "@type": "Offer",
-                "name": "Setup Pro",
-                "price": "2500",
+                "name": "AI Ready Complete",
+                "price": "899",
                 "priceCurrency": "RON"
             }
         ]
@@ -1134,6 +1215,21 @@
 
     <!-- JavaScript -->
     <script>
+        // Countdown timer (24h from page load)
+        let timeLeft = 24 * 60 * 60; // 24 hours in seconds
+        const countdownEl = document.getElementById('countdown');
+
+        setInterval(() => {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            countdownEl.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            timeLeft--;
+            if (timeLeft < 0) timeLeft = 24 * 60 * 60; // Reset
+        }, 1000);
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1175,29 +1271,6 @@
             setTimeout(() => {
                 document.getElementById('successMessage').classList.remove('show');
             }, 5000);
-            
-            // Actual implementation would be:
-            /*
-            try {
-                const response = await fetch('YOUR_ENDPOINT_HERE', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                if (response.ok) {
-                    document.getElementById('successMessage').classList.add('show');
-                    this.reset();
-                } else {
-                    alert('A apărut o eroare. Te rugăm să încerci din nou.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('A apărut o eroare. Te rugăm să ne contactezi direct la contact@primulsite.ro');
-            }
-            */
         });
 
         // Header background on scroll
